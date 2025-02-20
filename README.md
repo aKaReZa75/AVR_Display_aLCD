@@ -206,7 +206,7 @@ void alcd_putc(char c);
 void alcd_puts(char *_alcd_str);
 ```
 
-Example:
+Example1:
 ```c
 #include "aKaReZa.h"
 #include "alcd.h"
@@ -223,7 +223,7 @@ int main(void)
 }
 ```
 
-Example:
+Example2:
 ```c
 #include "aKaReZa.h"
 #include "alcd.h"
@@ -244,7 +244,9 @@ int main(void)
 
 ### Backlight Control
 > [!IMPORTANT]
-If the **`__alcd_useBL`** macro is true, the backlight can be controlled:
+If the **__alcd_useBL** macro is true, the backlight can be controlled.   
+In this case, the backlight pin (often pin 16 on the display, also known as LED-) should be driven through a NPN transistor to ensure proper current handling.    
+
 
 ```c
 /**
