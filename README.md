@@ -191,6 +191,7 @@ int main(void)
  * @param _alcd_cmdData A boolean indicating whether the byte is a command (`false`) or data (`true`).
  * Use the pre-defined constants `__alcd_writeData` and `__alcd_writeCmd` for clarity.
  */
+void alcd_write(uint8_t _alcd_write_value, bool _alcd_cmdData);
 
 /**
  * Display single character at current cursor position.
