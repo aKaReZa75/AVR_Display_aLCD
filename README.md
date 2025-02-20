@@ -90,6 +90,10 @@ To use the LCD driver, include the `alcd.h` header file in your project.  Then, 
  */ 
 void alcd_init(void);
 ```
+
+> [!IMPORTANT]  
+Currently, this library supports only the 16x2 LCD display. If you are using a display with a different size, you may need to modify the library to support it.
+
 Example:
 ```c
 #include "aKaReZa.h"
@@ -104,10 +108,6 @@ int main(void)
     }
 }
 ```
-
-> [!IMPORTANT]  
-Currently, this library supports only the 16x2 LCD display. If you are using a display with a different size, you may need to modify the library to support it.
-
 
 ### Display Control
 ```c
@@ -163,6 +163,7 @@ void alcd_gotoxy(uint8_t _alcd_x_position, uint8_t _alcd_y_position);
 ```
 
 > [!NOTE]
+By default, the cursor is off and does not blink. If you want to enable the cursor or blinking, you can use the `alcd_cursor()` function to configure the desired behavior.
 
 Example:
 ```c
