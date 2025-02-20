@@ -81,6 +81,11 @@ You can change the pin assignments to any other GPIO pins by simply modifying th
 ## API Reference
 To use the LCD driver, include the `alcd.h` header file in your project.  Then, use the following functions to control the LCD.
 
+> [!NOTE]  
+> The macros used in the code below are all defined in the `aKaReZa.h` header file, and detailed descriptions of these macros can be found at the following link:  
+> [https://github.com/aKaReZa75/AVR/blob/main/Macros.md](https://github.com/aKaReZa75/AVR/blob/main/Macros.md)
+
+
 ### Initialization
 ```c
 /*
@@ -281,8 +286,15 @@ int main(void)
  * _alcd_CGRAMdata: A pointer to an array of 8 bytes representing the character data. Each byte represents a row of the character.
  */
  void alcd_customChar(uint8_t _alcd_CGRAMadd, const uint8_t *_alcd_CGRAMdata);
-
 ```
+
+> [!TIP]  
+> To easily and quickly create custom characters for your LCD display, you can use the following online tools:
+> - [LCD Character Creator](https://maxpromer.github.io/LCD-Character-Creator/)
+> - [HD44780 Custom Character Generator](https://www.quinapalus.com/hd44780udg.html)   
+>
+> These tools allow you to design custom characters visually and generate the corresponding byte data that can be used with the `alcd_customChar` function.
+
 Example:
 ```c
 #include "aKaReZa.h"
