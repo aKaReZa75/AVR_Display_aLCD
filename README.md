@@ -9,9 +9,6 @@ The display can operate in two modes
 In 4-bit mode, only 4 data lines are used to transmit data, saving on pin usage compared to the 8-bit mode.    
 This document provides a comprehensive guide to using an alphanumeric LCD (16x2) with the ATmega328P microcontroller in 4-bit parallel mode. The provided `alcd.h` library simplifies LCD control.  
 
-> [!IMPORTANT]
-This library has been written by me for controlling a 16x2 alphanumeric display in 4-bit parallel mode with the ATMEGA328 microcontroller.
-
 The display uses the following pins:
 - RS (Register Select) for selecting data/command mode
 - EN (Enable) for latching data into the display
@@ -82,9 +79,10 @@ You can change the pin assignments to any other GPIO pins by simply modifying th
 To use the LCD driver, include the `alcd.h` header file in your project.  Then, use the following functions to control the LCD.
 
 > [!NOTE]  
-> The macros used in the code below are all defined in the `aKaReZa.h` header file, and detailed descriptions of these macros can be found at the following link:  
-> [https://github.com/aKaReZa75/AVR/blob/main/Macros.md](https://github.com/aKaReZa75/AVR/blob/main/Macros.md)
-
+> The library and all of its APIs provided below have been developed by myself.  
+This library utilizes various macros defined in the `aKaReZa.h` header file, which are designed to simplify bitwise operations and register manipulations.    
+Detailed descriptions of these macros can be found at the following link:  
+> [https://github.com/aKaReZa75/AVR/blob/main/Macros.md](https://github.com/aKaReZa75/AVR/blob/main/Macros.md)  
 
 ### Initialization
 ```c
