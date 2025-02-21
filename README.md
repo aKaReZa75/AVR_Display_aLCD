@@ -86,13 +86,11 @@ Detailed descriptions of these macros can be found at the following link:
 
 ### Initialization
 ```c
-/*
+void alcd_init(void);
+```
  * Initializes the LCD module.
  * This function must be called before any other LCD function.
  * It configures the necessary pins and sends initialization commands to the LCD.
- */ 
-void alcd_init(void);
-```
 
 > [!IMPORTANT]  
 Currently, this library supports only the 16x2 LCD display. If you are using a display with a different size, you may need to modify the library to support it.
@@ -114,18 +112,16 @@ int main(void)
 
 ### Display Control
 ```c
-/**
- * Clear the display and return the cursor to the home position (0, 0).
- */
 void alcd_clear(void);
+```
+ * Clear the display and return the cursor to the home position (0, 0).
 
-/**
- * Turn the display on or off.
- * @param _alcd_displayStatus TRUE to turn on, FALSE to turn off.
- */
+```c
 void alcd_display(_Bool _alcd_displayStatus);
 ```
-
+ * Turn the display on or off.
+ * @param `_alcd_displayStatus` TRUE to turn on, FALSE to turn off.
+ 
 > [!NOTE]  
 By default, the display is turned on. Therefore, there is no need to explicitly issue a command to enable the LCD display.
 
@@ -150,21 +146,20 @@ int main(void)
     
 ### Cursor Control
 ```c
-/**
- * Control the cursor appearance.
- * @param _alcd_Cursor TRUE to show the cursor, FALSE to hide it.
- * @param _alcd_Blink TRUE to enable blinking, FALSE to disable it.
- */
 void alcd_cursor(_Bool _alcd_Cursor, _Bool _alcd_Blink);
+```
+ * Control the cursor appearance.
+ * @param `_alcd_Cursor` TRUE to show the cursor, FALSE to hide it.
+ * @param `_alcd_Blink` TRUE to enable blinking, FALSE to disable it.
 
-/**
- * Set the cursor position.
- * @param _alcd_x_position Column position (0-15).
- * @param _alcd_y_position Row position (0-1).
- */
+
+```c
 void alcd_gotoxy(uint8_t _alcd_x_position, uint8_t _alcd_y_position);
 ```
-
+ * Set the cursor position.
+ * @param `_alcd_x_position` Column position (0-15).
+ * @param `_alcd_y_position` Row position (0-1).
+ 
 > [!NOTE]
 By default, the cursor is off and does not blink. If you want to enable the cursor or blinking, you can use the `alcd_cursor()` function to configure the desired behavior.
 
@@ -246,18 +241,17 @@ int main(void)
 ```
 
 ### Backlight Control
+
 > [!IMPORTANT]
 If the **__alcd_useBL** macro is true, the backlight can be controlled.   
 In this case, the backlight pin (often pin 16 on the display, also known as LED-) should be driven through a NPN transistor to ensure proper current handling.    
 
-
 ```c
-/**
- * Control the backlight (if enabled).
- * @param _alcd_backLightStatus Set to true to turn the backlight on, false to turn it off.
- */
 void alcd_backLight(bool _alcd_backLightStatus);
 ```
+ * Control the backlight (if enabled).
+ * @param `_alcd_backLightStatus` Set to true to turn the backlight on, false to turn it off.
+ 
 Example:
 ```c
 #include "aKaReZa.h"
@@ -278,14 +272,12 @@ int main(void)
 
 ### Custom Characters
 ```c
-/**
- * Defines a custom character and stores it in the LCD's CGRAM.
- * _alcd_CGRAMadd: The CGRAM address (0-7) where the character will be stored.
- * _alcd_CGRAMdata: A pointer to an array of 8 bytes representing the character data. Each byte represents a row of the character.
- */
  void alcd_customChar(uint8_t _alcd_CGRAMadd, const uint8_t *_alcd_CGRAMdata);
 ```
-
+ * Defines a custom character and stores it in the LCD's CGRAM.
+ * `_alcd_CGRAMadd`: The CGRAM address (0-7) where the character will be stored.
+ * `_alcd_CGRAMdata`: A pointer to an array of 8 bytes representing the character data. Each byte represents a row of the character.
+ 
 > [!TIP]  
 > To easily and quickly create custom characters for your LCD display, you can use the following online tools:
 > - [LCD Character Creator](https://maxpromer.github.io/LCD-Character-Creator/)
