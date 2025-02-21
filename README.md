@@ -183,28 +183,14 @@ int main(void)
 
 ### Data Writing
 ```c
-/**
- * Sends a command or data byte to the LCD (low-level function).
- * @param _alcd_write_value The byte value (command or data) to send to the LCD.
- * @param _alcd_cmdData A boolean indicating whether the byte is a command (`false`) or data (`true`).
- * Use the pre-defined constants `__alcd_writeData` and `__alcd_writeCmd` for clarity.
- */
 void alcd_write(uint8_t _alcd_write_value, bool _alcd_cmdData);
-
-/**
- * Display single character at current cursor position.
- * @param c The character to display on the LCD.
- */
-void alcd_putc(char c);
-
-/**
- * Write a string to the display.
- * @param _alcd_str Null-terminated string to display.
- */
-void alcd_puts(char *_alcd_str);
 ```
-
-Example1:
+ * Sends a command or data byte to the LCD (low-level function).
+ * @param `_alcd_write_value` The byte value (command or data) to send to the LCD.
+ * @param `_alcd_cmdData` A boolean indicating whether the byte is a command (`false`) or data (`true`).
+ * Use the pre-defined constants `__alcd_writeData` and `__alcd_writeCmd` for clarity.
+ 
+Example:
 ```c
 #include "aKaReZa.h"
 #include "alcd.h"
@@ -220,8 +206,20 @@ int main(void)
     }
 }
 ```
-
-Example2:
+ 
+```c
+void alcd_putc(char c);
+```
+ * Display single character at current cursor position.
+ * @param c The character to display on the LCD.
+ 
+```c
+void alcd_puts(char *_alcd_str);
+```
+ * Write a string to the display.
+ * @param `_alcd_str` Null-terminated string to display.
+ 
+Example:
 ```c
 #include "aKaReZa.h"
 #include "alcd.h"
