@@ -420,7 +420,7 @@ First, open **Git Bash** :
 -  Once **Git Bash** is open, run the following command to clone the repository:
 
  ```bash
-git clone https://github.com/aKaReZa75/AVR_Display_aLCD_Parallel.git
+git clone https://github.com/aKaReZa75/AVR_Display_aLCD.git
 ```
 - You can copy the above command by either:
 - Clicking on the **Copy** button on the right of the command.
