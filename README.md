@@ -1,13 +1,13 @@
-# 16x2 Alphanumeric Display (4-bit Mode) with AVR
+# Alphanumeric Display (4-bit Mode) with AVR
 
-The alphanumeric display (16x2) is a character-based LCD that can display up to 16 characters per row and 2 rows.   
+The alphanumeric display is a character-based LCD that can display up to 16 characters per row and 2 rows (for example 16x2).   
 
 The display can operate in two modes
 - **8-bit mode** (all 8 data pins used)
 - **4-bit mode** (only 4 data pins used)
 
 In 4-bit mode, only 4 data lines are used to transmit data, saving on pin usage compared to the 8-bit mode.    
-This document provides a comprehensive guide to using an alphanumeric LCD (16x2) with the ATmega328P microcontroller in 4-bit parallel mode. The provided `alcd.h` library simplifies LCD control.  
+This document provides a comprehensive guide to using an alphanumeric LCD with the AVR microcontrollers in 4-bit parallel mode. The provided `alcd.h` library simplifies LCD control.  
 
 The display uses the following pins:
 - RS (Register Select) for selecting data/command mode
