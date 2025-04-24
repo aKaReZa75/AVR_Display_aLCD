@@ -18,11 +18,26 @@ The display uses the following pins:
 > [!CAUTION]
 > It is absolutely critical that you carefully read every single word of this document, line by line, to ensure you don't miss any details. Nothing can be overlooked.
 
-> [!TIP]
-> If you're looking to better understand how to navigate and use my GitHub repositories — including exploring their structure, downloading or cloning projects, submitting issues, and asking questions 
-> everything you need is clearly explained in this video:  
-> [aKaReZa 95 - Programming, Git - PART B](https://youtu.be/zYiUItVFRqQ)   
-> Make sure to check it out!
+<table>
+  <tr>
+  <td valign="top">
+  
+  > [!TIP]  
+  > If you're looking to better understand how to navigate and use my GitHub repositories — including exploring their structure, downloading or cloning projects, submitting issues, and asking questions,  
+  > everything you need is clearly explained in this video:  
+  > [aKaReZa 95 - Programming, Git - PART B](https://youtu.be/zYiUItVFRqQ)  
+  > Make sure to check it out!
+  
+  </td>
+    <td width="360" valign="middle" style="padding: 0;">
+      <a href="https://youtu.be/zYiUItVFRqQ">
+       <img src="https://img.youtube.com/vi/zYiUItVFRqQ/maxresdefault.jpg"
+             width="360"
+             alt="aKaReZa 95 - Programming, Git - PART B Thumbnail"/>
+      </a>
+    </td>
+  </tr>
+</table>
 
 ## Hardware Pin & Register Definitions
 In this library, it is very easy to connect the LCD pins to any desired microcontroller pins. The default pin assignments provided in the library are configured to work with the D1 LCD Shield.   
