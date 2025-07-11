@@ -410,6 +410,15 @@ int main(void)
 # 🔗 Resources
   Here you'll find a collection of useful links and videos related to the topic of AVR microcontrollers.  
 
+```plaintext
+AVR, Alphanumeric LCD
+  └── [aKaReZa 57 - AVR, Alphanumeric LCD]
+       ├─ Setup — LCD connection using AVR microcontrollers.
+       ├─ Library — alcd functions and text display.
+       ├─ Custom Characters — Including Farsi text creation.
+       └─ Display Tuning — Decimal display and contrast adjustment.
+```
+
 <table style="border-collapse: collapse;">
   <tr>
     <td valign="top" style="padding: 0 10px;">
